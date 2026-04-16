@@ -86,35 +86,41 @@
 <header>
     <div class="container">
         <h1>Thibault Pensec</h1>
-        <p class="title">Lead Software Engineer at Symphony · Paris, France</p>
+        <p class="title" data-i18n="header-subtitle">Lead Software Engineer at Symphony · Paris, France</p>
+        <div class="lang-toggle">
+            <button id="lang-en" class="lang-btn active" aria-label="Switch to English" onclick="setLang('en')">EN</button>
+            <span class="lang-sep">|</span>
+            <button id="lang-fr" class="lang-btn" aria-label="Passer en français" onclick="setLang('fr')">FR</button>
+        </div>
     </div>
 </header>
 
 <main>
-    <section class="about" aria-label="About Thibault Pensec">
+    <section class="about" data-i18n-attr="aria-label:aria-about" aria-label="About Thibault Pensec">
         <div class="container about-container">
             <div class="about-text">
-                <h2>About Me</h2>
-                <p>
+                <h2 data-i18n="about-heading">About Me</h2>
+                <p data-i18n="about-p1">
                     Lead Software Engineer with 12+ years of experience, from Thales to
                     <a href="https://symphony.com" rel="noopener">Symphony</a>.
                     I specialise in backend engineering with <strong>Java</strong> and <strong>Go</strong>,
                     API-First design with <strong>OpenAPI</strong>, containerisation with <strong>Docker</strong>,
                     and building secure, scalable distributed systems.
                 </p>
-                <p>
+                <p data-i18n="about-p2">
                     At Symphony — an end-to-end encrypted communication platform used by the world's
                     largest financial institutions — I drive technical direction and engineering
                     excellence across the platform. I am deeply committed to <strong>open-source</strong>
                     and actively contribute to projects in the Java and Go ecosystems.
                 </p>
-                <p>
+                <p data-i18n="about-p3">
                     Based in <strong>Paris, France</strong>. Available for speaking, open-source
                     collaboration, and technical discussions.
                 </p>
             </div>
             <img src="assets/me_500.jpg"
                  alt="Thibault Pensec — Lead Software Engineer based in Paris"
+                 data-i18n-attr="alt:img-alt"
                  class="profile-picture"
                  width="200"
                  height="200">
@@ -125,17 +131,18 @@
 <footer>
     <div class="container">
         <div class="social-links">
-            <a href="https://github.com/thibauult" target="_blank" rel="noopener" aria-label="Thibault Pensec on GitHub">
+            <a href="https://github.com/thibauult" target="_blank" rel="noopener" aria-label="Thibault Pensec on GitHub" data-i18n-attr="aria-label:aria-github">
                 <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/thibault-pensec" target="_blank" rel="noopener" aria-label="Thibault Pensec on LinkedIn">
+            <a href="https://www.linkedin.com/in/thibault-pensec" target="_blank" rel="noopener" aria-label="Thibault Pensec on LinkedIn" data-i18n-attr="aria-label:aria-linkedin">
                 <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="mailto:thibault.pensec@gmail.com" aria-label="Send an email to Thibault Pensec">
+            <a href="mailto:thibault.pensec@gmail.com" aria-label="Send an email to Thibault Pensec" data-i18n-attr="aria-label:aria-email">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
         </div>
     </div>
 </footer>
+<script src="i18n.js"></script>
 </body>
 </html>
